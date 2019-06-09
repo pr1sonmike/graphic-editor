@@ -1,0 +1,22 @@
+{
+  "name": "nurbek-chymbaev/graphic-editor",
+  "description": "A simple package to draw shapes",
+  "homepage": "https://github.com/NurbekChymbaev/graphic-editor",
+  "type": "library",
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Nurbek Chymbaev",
+      "email": "nurbek.chymbaev@gmail.com"
+    }
+  ],
+  "require": {
+    "php": ">=5.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "GraphicEditor\\": "src/"
+    }
+  }
+}
