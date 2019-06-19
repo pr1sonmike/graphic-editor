@@ -1,11 +1,18 @@
 <?php
 
-namespace GraphicEditor\Shapes;
+namespace GraphicEditor\Shape;
 
-use GraphicEditor\Shape;
+use GraphicEditor\AbstractShape;
 
-class Square extends Shape
+/**
+ * Class Square
+ * @package GraphicEditor\Shapes
+ */
+class Square extends AbstractShape
 {
+    /**
+     * @return mixed|string
+     */
     public function draw()
     {
         $width = $this->size;

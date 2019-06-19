@@ -2,12 +2,27 @@
 
 namespace GraphicEditor;
 
-abstract class Shape implements ShapeDrawer
+/**
+ * Class Shape
+ * @package GraphicEditor
+ */
+abstract class AbstractShape implements ShapeInterface
 {
+    /**
+     * @var array
+     */
     protected $params = [];
 
+    /**
+     * @var string
+     */
     protected $path;
 
+    /**
+     * Shape constructor.
+     * @param array $params
+     * @param string $path
+     */
     public function __construct(array $params = [], $path = __DIR__)
     {
         $this->params = $params;
@@ -15,6 +30,10 @@ abstract class Shape implements ShapeDrawer
         $this->path = $path;
     }
 
+    /**
+     * @param $name
+     * @return mixed|null
+     */
     public function __get($name)
     {
         if (isset($this->params[$name])) {
