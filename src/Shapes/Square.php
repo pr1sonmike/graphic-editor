@@ -1,19 +1,12 @@
 <?php
 
-namespace GraphicEditor\Shape;
+namespace GraphicEditor\Shapes;
 
-use GraphicEditor\AbstractShape;
+use GraphicEditor\Shape;
 
-/**
- * Class Square
- * @package GraphicEditor\Shapes
- */
-class Square extends AbstractShape
+class Square extends Shape
 {
-    /**
-     * @return mixed|string
-     */
-    public function draw()
+    public function draw(): string
     {
         $width = $this->size;
         list($red, $green, $blue) = explode(',', $this->color);
@@ -22,7 +15,7 @@ class Square extends AbstractShape
         $image = imagecreatetruecolor($width, $width);
         $color = imagecolorallocate($image, $red, $green, $blue);
         imageantialias($image, true);
-        imagefilledrectangle ($image, 0, 0, $width, $width, $color);
+        imagefilledrectangle($image, 0, 0, $width, $width, $color);
         imagepng($image, $filename);
         imagedestroy($image);
 

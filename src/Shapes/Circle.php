@@ -1,19 +1,12 @@
 <?php
 
-namespace GraphicEditor\Shape;
+namespace GraphicEditor\Shapes;
 
-use GraphicEditor\AbstractShape;
+use GraphicEditor\Shape;
 
-/**
- * Class Circle
- * @package GraphicEditor\Shapes
- */
-class Circle extends AbstractShape
+class Circle extends Shape
 {
-    /**
-     * @return mixed|string
-     */
-    public function draw()
+    public function draw(): string
     {
         $width = $this->size;
         $height = $this->size;

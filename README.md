@@ -38,7 +38,7 @@ var_dump($images);
 ```php
 
 use GraphicEditor\GraphicEditor;
-use GraphicEditor\Shape;
+use GraphicEditor\Shapes;
 
 class Ellipse extends Shape
 {
